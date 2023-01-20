@@ -42,8 +42,6 @@ margin: -1px;
 width: 1158px;
 margin-left: auto;
 margin-right: auto;
-padding-left: 15px;
-padding-right: 15px;
 }
 
 header {
@@ -51,9 +49,6 @@ border-bottom: 1px solid #E7E9FC;
 }
 header .container {
 display: flex;
-flex-direction: main-start;
-padding-top: 24px;
-padding-bottom: 24px;
 }
 /* Для полной версиси */
 .block-header{
@@ -79,6 +74,8 @@ line-height: 1.33;
 text-transform: uppercase;
 text-decoration: none;
 display: inline-block;
+padding-top: 24px;
+padding-bottom: 24px ;
 }
 .logo-first-word {
 color: var(--accent-color);
@@ -95,6 +92,8 @@ font-family: Roboto;
 font-weight: 600;
 display: flex;
 margin-left: 80px;
+padding-top: 24px;
+padding-bottom: 28px ;
 }
 .nav-list :not(:last-child) {
 margin-right: 40px;
@@ -105,6 +104,8 @@ color: var(--title-text-color);
 font-size: 16px;
 line-height: 1.33;
 
+padding-top: 24px;
+padding-bottom: 28px;
 position: relative;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -119,6 +120,8 @@ color: #404BBF ;
 list-style-type: none;
 display: flex;
 margin-left: auto;
+padding-top: 24px;
+padding-bottom: 28px;
 }
 .contacts :not(:last-child) {
 margin-right: 40px;
@@ -130,6 +133,8 @@ font-size: 16px;
 line-height: 1.33;
 text-decoration: none;
 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+padding-top: 24px;
+padding-bottom: 28px;
 }
 .contact:hover,
 .contact:focus {
@@ -300,21 +305,21 @@ line-height: 1.33;
 .input-label input {
 width: 360px;
 height: 40px;
-padding: 11px 0px 11px 30px;
+padding: 11px 0px 11px 38px;
 border-radius: 4px;
 outline: 1px solid rgba(33, 33, 33, 0.2);
 border: transparent;
+font-weight: 400;
+font-size: 12px;
+letter-spacing: 0.04em;
+line-height: 1.3;
+color: var(--primary-text-color);
 }
 
 .text-input {
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-font-size: 18px;
-color: var(--primary-text-color);
-}
 
-.text-input:focus + .form-icon {
-fill: var(--accent-color);
 }
 
 .text-input:focus {
@@ -335,7 +340,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transform: translate(-50%, -50%);
 }
 
-.comment {
+.text-input:focus + .form-icon {
+fill: var(--accent-color);
+}
+.comment{
 display: flex;
 flex-direction: column;
 gap: 4px;
@@ -690,11 +698,18 @@ padding-bottom: 8px;
 padding-top: 0px;
 padding-right:  0px;
 padding-bottom: 0px;
+color: rgba(255, 255, 255, 0.3);
 border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
 background-color: var(--secondary-background-color);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.input-mail:focus{
+border-color: var(--accent-color);
+outline: none;
+}
+
 .input-mail::placeholder {
 font-family: roboto;
 font-style: normal;
@@ -704,13 +719,9 @@ line-height: 0.5px;
 color: rgba(255, 255, 255, 0.6);
 align-items: center;
 letter-spacing: 0.04em;
+background-color: var(--secondary-background-color);
 }
-.input-mail:focus {
-border:transparent;
-}
-input {
-color: rgba(255, 255, 255, 0.3);
-}
+
 .button-subscribe {
 width: 165px;
 height: 40px;
@@ -776,6 +787,8 @@ box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 color: var(--primary-background-color);
 background-color: var(--accent-color);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+border-color: var(--accent-color);
+outline: none;
 
 }
 .project-cards-list {
